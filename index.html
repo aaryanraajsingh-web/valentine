@@ -6,17 +6,15 @@
   <title>For Mahek 💖</title>
   <style>
     :root{
-      --rose-1:#ffe3ef;
-      --rose-2:#ffd1dc;
-      --rose-3:#f7b3c8;
+      --rose-1:#ffe6f2;
+      --rose-2:#ffd1e1;
+      --rose-3:#f7b2cb;
       --wine:#6b1036;
       --plum:#2a0b1f;
       --gold:#ffd37d;
-      --card: rgba(255,255,255,.75);
-      --glass: rgba(255,255,255,.18);
+      --card: rgba(255,255,255,.78);
       --shadow: 0 22px 60px rgba(17, 2, 10, .22);
     }
-
     *{box-sizing:border-box}
     html,body{height:100%}
     body{
@@ -33,111 +31,80 @@
       place-items:center;
     }
 
-    /* Floating soft bokeh */
-    .bokeh{
-      position:fixed;
-      inset:0;
-      pointer-events:none;
-      overflow:hidden;
-      filter: blur(1px);
-      opacity:.75;
-    }
+    /* Floating bokeh */
+    .bokeh{position:fixed; inset:0; pointer-events:none; overflow:hidden; opacity:.8; filter: blur(1px);}
     .orb{
-      position:absolute;
-      width:220px; height:220px;
-      border-radius:999px;
+      position:absolute; width:240px; height:240px; border-radius:999px;
       background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.9), rgba(255,255,255,.08) 45%, transparent 65%);
       animation: drift 14s ease-in-out infinite;
       mix-blend-mode: soft-light;
     }
-    .orb:nth-child(1){left:-40px; top:12%; animation-duration: 16s; transform: scale(.95)}
-    .orb:nth-child(2){left:18%; top:70%; width:280px; height:280px; animation-duration: 18s; transform: scale(1.05)}
-    .orb:nth-child(3){left:72%; top:62%; width:240px; height:240px; animation-duration: 17s}
-    .orb:nth-child(4){left:86%; top:18%; width:260px; height:260px; animation-duration: 19s}
+    .orb:nth-child(1){left:-60px; top:12%; animation-duration: 16s; transform: scale(.95)}
+    .orb:nth-child(2){left:14%; top:70%; width:300px; height:300px; animation-duration: 18s; transform: scale(1.05)}
+    .orb:nth-child(3){left:72%; top:62%; width:260px; height:260px; animation-duration: 17s}
+    .orb:nth-child(4){left:86%; top:18%; width:290px; height:290px; animation-duration: 19s}
     @keyframes drift{
       0%,100%{ transform: translate(0,0) scale(1); opacity:.7 }
-      50%{ transform: translate(22px,-18px) scale(1.05); opacity:1 }
+      50%{ transform: translate(24px,-18px) scale(1.06); opacity:1 }
     }
 
-    /* Card */
-    .wrap{
-      width:min(820px, 94vw);
-      padding:24px;
-      position:relative;
-    }
+    .wrap{width:min(920px, 94vw); padding:24px; position:relative;}
     .card{
       background: var(--card);
       border: 1px solid rgba(255,255,255,.45);
-      border-radius: 28px;
+      border-radius: 30px;
       box-shadow: var(--shadow);
       backdrop-filter: blur(10px);
       -webkit-backdrop-filter: blur(10px);
-      padding: 30px 24px;
+      padding: 34px 24px;
       position:relative;
       overflow:hidden;
     }
     .card::before{
       content:"";
-      position:absolute;
-      inset:-2px;
+      position:absolute; inset:-2px;
       background:
-        radial-gradient(700px 220px at 20% 0%, rgba(255,255,255,.55), transparent 60%),
-        radial-gradient(420px 280px at 90% 10%, rgba(255,211,125,.35), transparent 65%),
+        radial-gradient(720px 240px at 20% 0%, rgba(255,255,255,.55), transparent 60%),
+        radial-gradient(460px 300px at 90% 10%, rgba(255,211,125,.32), transparent 65%),
         linear-gradient(120deg, rgba(255,255,255,.22), rgba(255,255,255,0));
       pointer-events:none;
     }
 
-    .top{
-      text-align:center;
-      position:relative;
-      z-index:1;
-    }
+    .top{text-align:center; position:relative; z-index:1;}
     .kicker{
-      display:inline-flex;
-      gap:10px;
-      align-items:center;
-      padding:8px 14px;
-      border-radius:999px;
+      display:inline-flex; gap:10px; align-items:center;
+      padding:8px 14px; border-radius:999px;
       background: rgba(255,255,255,.55);
       border: 1px solid rgba(255,255,255,.55);
-      font-weight: 600;
-      letter-spacing:.2px;
-      color: rgba(42,11,31,.85);
+      font-weight: 800; letter-spacing:.2px;
+      color: rgba(42,11,31,.86);
     }
     .kicker .dot{
       width:10px; height:10px; border-radius:99px;
       background: radial-gradient(circle at 30% 30%, #fff, #ff6aa8);
       box-shadow: 0 0 0 6px rgba(255,106,168,.15);
     }
-
     h1{
       margin:18px 0 8px;
-      font-size: clamp(28px, 4vw, 44px);
+      font-size: clamp(28px, 4vw, 46px);
       line-height:1.06;
       color: var(--wine);
-      letter-spacing:-.5px;
+      letter-spacing:-.6px;
     }
     .sub{
       margin:0 auto 18px;
-      max-width: 56ch;
+      max-width: 64ch;
       font-size: 16px;
       opacity:.9;
     }
-
     .heartRow{
       margin: 12px 0 8px;
       font-size: 34px;
-      display:inline-flex;
-      gap:10px;
-      align-items:center;
-      justify-content:center;
+      display:inline-flex; gap:10px; align-items:center; justify-content:center;
       animation: beat 1.15s ease-in-out infinite;
       transform-origin:center;
     }
-    @keyframes beat{
-      0%,100%{ transform: scale(1) }
-      50%{ transform: scale(1.08) }
-    }
+    @keyframes beat{ 0%,100%{transform:scale(1)} 50%{transform:scale(1.08)} }
 
     /* Buttons */
     .arena{
@@ -146,7 +113,7 @@
       justify-content:center;
       gap:14px;
       position:relative;
-      height: 70px;
+      height: 74px;
       z-index:1;
     }
     button{
@@ -154,11 +121,12 @@
       border-radius: 16px;
       padding: 14px 22px;
       font-size: 18px;
-      font-weight: 700;
+      font-weight: 900;
       cursor:pointer;
       transition: transform .12s ease, filter .12s ease;
       user-select:none;
       box-shadow: 0 14px 28px rgba(17, 2, 10, .16);
+      white-space: nowrap;
     }
     button:active{ transform: scale(.98) }
 
@@ -179,12 +147,29 @@
       border: 1px solid rgba(255,255,255,.14);
     }
 
-    /* Cute footer line */
+    .secondaryRow{
+      margin-top: 14px;
+      display:flex;
+      justify-content:center;
+      gap:12px;
+      flex-wrap: wrap;
+      position:relative;
+      z-index:1;
+    }
+    #scoobBtn{
+      background: rgba(255,255,255,.58);
+      color: rgba(42,11,31,.92);
+      border: 1px solid rgba(255,255,255,.55);
+      box-shadow: 0 14px 28px rgba(17, 2, 10, .12);
+      font-weight: 900;
+    }
+    #scoobBtn:hover{ filter: brightness(1.03) }
+
     .footer{
-      margin-top: 18px;
+      margin-top: 16px;
       text-align:center;
       font-size: 13px;
-      opacity:.75;
+      opacity:.78;
       z-index:1;
       position:relative;
     }
@@ -200,20 +185,20 @@
     .modalBack{
       position: fixed;
       inset:0;
-      background: rgba(15, 2, 10, .55);
+      background: rgba(15, 2, 10, .58);
       display:none;
       place-items:center;
       padding:18px;
       z-index: 50;
     }
     .modal{
-      width:min(740px, 96vw);
+      width:min(900px, 96vw);
       border-radius: 30px;
       padding: 26px 20px;
       background:
         radial-gradient(800px 280px at 15% 10%, rgba(255,255,255,.75), transparent 60%),
         radial-gradient(520px 320px at 90% 0%, rgba(255,211,125,.32), transparent 65%),
-        linear-gradient(135deg, rgba(255,255,255,.92), rgba(255,255,255,.76));
+        linear-gradient(135deg, rgba(255,255,255,.92), rgba(255,255,255,.78));
       box-shadow: 0 28px 90px rgba(0,0,0,.35);
       border: 1px solid rgba(255,255,255,.45);
       text-align:center;
@@ -222,21 +207,21 @@
     }
     .modal h2{
       margin: 2px 0 10px;
-      font-size: clamp(24px, 3.2vw, 34px);
+      font-size: clamp(24px, 3.2vw, 36px);
       color: var(--wine);
       letter-spacing:-.3px;
     }
     .modal p{
       margin:0 auto;
-      max-width: 70ch;
-      line-height:1.6;
+      max-width: 80ch;
+      line-height:1.65;
       font-size: 16.5px;
       color: rgba(42,11,31,.92);
     }
-    .modal .sig{
+    .sig{
       margin-top: 14px;
-      font-weight: 800;
-      color: rgba(107,16,54,.9);
+      font-weight: 950;
+      color: rgba(107,16,54,.92);
     }
     .close{
       margin-top: 18px;
@@ -247,29 +232,16 @@
     }
 
     /* Sparkles */
-    .sparkles{
-      position: fixed;
-      inset: 0;
-      pointer-events:none;
-      overflow:hidden;
-      display:none;
-      z-index: 60;
-    }
+    .sparkles{position: fixed; inset: 0; pointer-events:none; overflow:hidden; display:none; z-index: 60;}
     .spark{
       position:absolute;
       font-size: 22px;
-      animation: float 2.4s ease-out forwards;
+      animation: float 2.6s ease-out forwards;
       filter: drop-shadow(0 10px 14px rgba(0,0,0,.15));
     }
     @keyframes float{
       from { transform: translateY(0) scale(1); opacity: 1; }
-      to   { transform: translateY(-210px) scale(1.55); opacity: 0; }
-    }
-
-    /* Small devices: keep arena clickable */
-    @media (max-width: 420px){
-      button{ font-size: 17px; padding: 13px 18px; }
-      .arena{ height: 76px; }
+      to   { transform: translateY(-220px) scale(1.55); opacity: 0; }
     }
   </style>
 </head>
@@ -279,18 +251,20 @@
   </div>
 
   <main class="wrap">
-    <section class="card" role="region" aria-label="Valentine Card">
+    <section class="card" aria-label="Valentine Card">
       <div class="top">
         <div class="kicker"><span class="dot"></span>For Mahek • Baby • Love • Pumpkin • Monkey</div>
         <div class="heartRow">💖 ✨ 💘</div>
         <h1>Will you be my Valentine?</h1>
-        <p class="sub">
-          One question, one answer… and one very determined boyfriend. 😌
-        </p>
+        <p class="sub">One question… one answer… and one very determined boyfriend. 😌</p>
 
         <div class="arena" id="arena">
           <button id="yes" type="button">Yes</button>
           <button id="no" type="button" aria-label="No (good luck clicking)">No</button>
+        </div>
+
+        <div class="secondaryRow">
+          <button id="scoobBtn" type="button">Scoob & his owner have a message for you 🐾</button>
         </div>
 
         <div class="footer">
@@ -302,25 +276,57 @@
 
   <div class="sparkles" id="sparkles" aria-hidden="true"></div>
 
-  <div class="modalBack" id="modalBack" role="dialog" aria-modal="true" aria-label="Love message">
+  <!-- YES MODAL -->
+  <div class="modalBack" id="yesBack" role="dialog" aria-modal="true" aria-label="Love message">
     <div class="modal">
       <h2>YES!! 💘</h2>
       <p>
-        Mahek… baby, I love you so much.<br><br>
-        You’re my favourite person, my peace, and my happiest place.
-        I feel insanely lucky that I get to call you mine, Love —
-        and I’m genuinely happier because you exist in my life.<br><br>
+        Mahek… baby, I love you more than you realise.<br><br>
+
+        While you’re reading this, you should also be receiving <b>roses</b> and a <b>bottle of wine</b>.<br>
+        Please enjoy the wine and the roses for me… and forgive me for not being there in person today.
+        I wish I could be right next to you, holding you, instead of being so far away.<br><br>
+
+        I’m going to be honest and pour my heart out: you’re not just beautiful —
+        you’re real. You know who you are, you know what you want, and your priorities are clear.
+        That strength is one of the biggest reasons I respect you so deeply… and why I’m so in love with you.<br><br>
+
+        I believe in you completely. No matter what you’re doing now, or what you do in the future,
+        I’ll always be right beside you — not because you need me, but because I want to be your biggest cheerleader
+        and your safest place. Even on the days life feels unfair or uncertain, I have full confidence that
+        everything will fall into place for you — one step at a time.<br><br>
 
         Also… congrats, <b>Pumpkin</b> & <b>Monkey</b> 😌🍫🍕<br>
-        Because the “you’ll always force me to eat chocolate and pizza and make me fat” plan?
-        Not only is it real… it’s a lifetime subscription.
-        Forever. No refunds. 😂💖<br><br>
+        The “you’ll always force me to eat chocolate and pizza and make me fat” plan?
+        Not only is it real… it’s a lifetime subscription. Forever. No refunds. 😂💖<br><br>
 
-        And yes — one day we’re going back to Melbourne and I’m taking you to
-        <b>Mietta by Rosemary</b> again… because anything you love, I love too. 🌹
+        And on <b>06 March</b>, when I fly to Melbourne to see you… we’re going to
+        <b>Mietta by Rosemary</b> together — and yes, we might get fat again.
+        But we’ll do it happily… together. 🌹🍷
       </p>
-      <div class="sig">— Always yours 🤍</div>
-      <button class="close" id="closeBtn" type="button">Come here ❤️</button>
+      <div class="sig">— Always yours, Aaryan 🤍</div>
+      <button class="close" id="yesClose" type="button">Come here ❤️</button>
+    </div>
+  </div>
+
+  <!-- SCOOB MODAL (no photos, jokes only) -->
+  <div class="modalBack" id="scoobBack" role="dialog" aria-modal="true" aria-label="Scoob message">
+    <div class="modal">
+      <h2>Scoob & his owner have a message for you 🐾</h2>
+
+      <p>
+        Baby… Scoob’s official statement is: “Hi Mahek, I love you too and I approve this.” 🐶💖<br><br>
+
+        And yes… when we finally start living together, you already know what’s coming:
+        you trying to sleep… and me + Scoob falling asleep in <i>record time</i> like it’s a sport. 😭😂<br>
+        Meanwhile you’ll be wide awake thinking, “How are these two sleeping already?” 😌<br><br>
+
+        But don’t worry — we’ll still wake up for you… and for chocolate + pizza dates (non-negotiable).
+        🍫🍕💘
+      </p>
+
+      <div class="sig">— Love, from Scoob & Aaryan 🐾</div>
+      <button class="close" id="scoobClose" type="button">Okay I’m melting 🥺❤️</button>
     </div>
   </div>
 
@@ -328,8 +334,14 @@
     const noBtn = document.getElementById('no');
     const yesBtn = document.getElementById('yes');
     const arena = document.getElementById('arena');
-    const modalBack = document.getElementById('modalBack');
-    const closeBtn = document.getElementById('closeBtn');
+
+    const yesBack = document.getElementById('yesBack');
+    const yesClose = document.getElementById('yesClose');
+
+    const scoobBtn = document.getElementById('scoobBtn');
+    const scoobBack = document.getElementById('scoobBack');
+    const scoobClose = document.getElementById('scoobClose');
+
     const sparkles = document.getElementById('sparkles');
 
     function clamp(n, min, max){ return Math.max(min, Math.min(max, n)); }
@@ -341,18 +353,17 @@
       const maxX = a.width - b.width;
       const maxY = a.height - b.height;
 
-      // Keep within the arena, but bias it away from the YES button so it doesn't overlap
       let x = Math.random() * maxX;
       let y = Math.random() * maxY;
 
-      // Gentle nudge to avoid center area
+      // bias away from YES button zone
       if (x < a.width * 0.55) x = a.width * 0.62 + Math.random() * (a.width * 0.35);
 
       noBtn.style.left = `${clamp(x, 0, maxX)}px`;
       noBtn.style.top  = `${clamp(y, 0, maxY)}px`;
     }
 
-    // Make it *very* hard to click on desktop + mobile
+    // Make NO impossible
     noBtn.addEventListener('mouseenter', moveNo);
     noBtn.addEventListener('mousemove', moveNo);
     noBtn.addEventListener('pointerenter', moveNo);
@@ -362,8 +373,8 @@
     function popSparkles(){
       sparkles.style.display = 'block';
       sparkles.innerHTML = '';
-      const emojis = ['💖','✨','💘','💞','🌹','🥰','🍫','🍕'];
-      for (let i = 0; i < 30; i++){
+      const emojis = ['💖','✨','💘','💞','🌹','🥰','🍫','🍕','🍷','🐾'];
+      for (let i = 0; i < 34; i++){
         const s = document.createElement('div');
         s.className = 'spark';
         s.textContent = emojis[Math.floor(Math.random() * emojis.length)];
@@ -372,19 +383,30 @@
         s.style.animationDelay = `${Math.random() * 0.35}s`;
         sparkles.appendChild(s);
       }
-      setTimeout(() => { sparkles.style.display = 'none'; }, 2600);
+      setTimeout(() => { sparkles.style.display = 'none'; }, 2800);
     }
 
     yesBtn.addEventListener('click', () => {
       popSparkles();
-      modalBack.style.display = 'grid';
+      yesBack.style.display = 'grid';
+    });
+    yesClose.addEventListener('click', () => {
+      yesBack.style.display = 'none';
     });
 
-    closeBtn.addEventListener('click', () => {
-      modalBack.style.display = 'none';
+    scoobBtn.addEventListener('click', () => {
+      popSparkles();
+      scoobBack.style.display = 'grid';
+    });
+    scoobClose.addEventListener('click', () => {
+      scoobBack.style.display = 'none';
     });
 
-    // Initial position for "No"
+    // click outside modal to close
+    yesBack.addEventListener('click', (e) => { if (e.target === yesBack) yesBack.style.display = 'none'; });
+    scoobBack.addEventListener('click', (e) => { if (e.target === scoobBack) scoobBack.style.display = 'none'; });
+
+    // Initial NO position
     moveNo();
   </script>
 </body>
