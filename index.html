@@ -92,10 +92,22 @@
       letter-spacing:-.6px;
     }
     .sub{
-      margin:0 auto 18px;
+      margin:0 auto 10px;
       max-width: 64ch;
       font-size: 16px;
       opacity:.9;
+    }
+    .giftline{
+      margin: 0 auto 18px;
+      max-width: 64ch;
+      font-size: 14.5px;
+      font-weight: 800;
+      color: rgba(107,16,54,.92);
+      display:inline-block;
+      padding: 8px 12px;
+      border-radius: 999px;
+      background: rgba(255,255,255,.52);
+      border: 1px solid rgba(255,255,255,.55);
     }
     .heartRow{
       margin: 12px 0 8px;
@@ -258,6 +270,8 @@
         <h1>Will you be my Valentine?</h1>
         <p class="sub">One question… one answer… and one very determined boyfriend. 😌</p>
 
+        <div class="giftline">Your roses + wine are arriving… open this when you have them 💐🍷</div>
+
         <div class="arena" id="arena">
           <button id="yes" type="button">Yes</button>
           <button id="no" type="button" aria-label="No (good luck clicking)">No</button>
@@ -294,7 +308,7 @@
         I believe in you completely. No matter what you’re doing now, or what you do in the future,
         I’ll always be right beside you — not because you need me, but because I want to be your biggest cheerleader
         and your safest place. Even on the days life feels unfair or uncertain, I have full confidence that
-        everything will fall into place for you — one step at a time.<br><br>
+        everything will fall in place for you — one step at a time.<br><br>
 
         Also… congrats, <b>Pumpkin</b> & <b>Monkey</b> 😌🍫🍕<br>
         The “you’ll always force me to eat chocolate and pizza and make me fat” plan?
@@ -373,7 +387,7 @@
     function popSparkles(){
       sparkles.style.display = 'block';
       sparkles.innerHTML = '';
-      const emojis = ['💖','✨','💘','💞','🌹','🥰','🍫','🍕','🍷','🐾'];
+      const emojis = ['💖','✨','💘','💞','🌹','🥰','🍫','🍕','🍷','🐾','💐'];
       for (let i = 0; i < 34; i++){
         const s = document.createElement('div');
         s.className = 'spark';
