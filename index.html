@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>For Mahek 💖</title>
+  <style>
+    :root{
+      --rose-1:#ffe3ef;
+      --rose-2:#ffd1dc;
+      --rose-3:#f7b3c8;
+      --wine:#6b1036;
+      --plum:#2a0b1f;
+      --gold:#ffd37d;
+      --card: rgba(255,255,255,.75);
+      --glass: rgba(255,255,255,.18);
+      --shadow: 0 22px 60px rgba(17, 2, 10, .22);
+    }
+
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;
+      color:var(--plum);
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      overflow:hidden;
+      background:
+        radial-gradient(1200px 700px at 10% 10%, rgba(255,211,125,.55), transparent 55%),
+        radial-gradient(900px 600px at 85% 20%, rgba(255,152,186,.55), transparent 60%),
+        radial-gradient(900px 700px at 50% 90%, rgba(185,54,106,.28), transparent 58%),
+        linear-gradient(135deg, var(--rose-1), var(--rose-2), var(--rose-3));
+      display:grid;
+      place-items:center;
+    }
+
+    /* Floating soft bokeh */
+    .bokeh{
+      position:fixed;
+      inset:0;
+      pointer-events:none;
+      overflow:hidden;
+      filter: blur(1px);
+      opacity:.75;
+    }
+    .orb{
+      position:absolute;
+      width:220px; height:220px;
+      border-radius:999px;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.9), rgba(255,255,255,.08) 45%, transparent 65%);
+      animation: drift 14s ease-in-out infinite;
+      mix-blend-mode: soft-light;
+    }
+    .orb:nth-child(1){left:-40px; top:12%; animation-duration: 16s; transform: scale(.95)}
+    .orb:nth-child(2){left:18%; top:70%; width:280px; height:280px; animation-duration: 18s; transform: scale(1.05)}
+    .orb:nth-child(3){left:72%; top:62%; width:240px; height:240px; animation-duration: 17s}
+    .orb:nth-child(4){left:86%; top:18%; width:260px; height:260px; animation-duration: 19s}
+    @keyframes drift{
+      0%,100%{ transform: translate(0,0) scale(1); opacity:.7 }
+      50%{ transform: translate(22px,-18px) scale(1.05); opacity:1 }
+    }
+
+    /* Card */
+    .wrap{
+      width:min(820px, 94vw);
+      padding:24px;
+      position:relative;
+    }
+    .card{
+      background: var(--card);
+      border: 1px solid rgba(255,255,255,.45);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      padding: 30px 24px;
+      position:relative;
+      overflow:hidden;
+    }
+    .card::before{
+      content:"";
+      position:absolute;
+      inset:-2px;
+      background:
+        radial-gradient(700px 220px at 20% 0%, rgba(255,255,255,.55), transparent 60%),
+        radial-gradient(420px 280px at 90% 10%, rgba(255,211,125,.35), transparent 65%),
+        linear-gradient(120deg, rgba(255,255,255,.22), rgba(255,255,255,0));
+      pointer-events:none;
+    }
+
+    .top{
+      text-align:center;
+      position:relative;
+      z-index:1;
+    }
+    .kicker{
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      padding:8px 14px;
+      border-radius:999px;
+      background: rgba(255,255,255,.55);
+      border: 1px solid rgba(255,255,255,.55);
+      font-weight: 600;
+      letter-spacing:.2px;
+      color: rgba(42,11,31,.85);
+    }
+    .kicker .dot{
+      width:10px; height:10px; border-radius:99px;
+      background: radial-gradient(circle at 30% 30%, #fff, #ff6aa8);
+      box-shadow: 0 0 0 6px rgba(255,106,168,.15);
+    }
+
+    h1{
+      margin:18px 0 8px;
+      font-size: clamp(28px, 4vw, 44px);
+      line-height:1.06;
+      color: var(--wine);
+      letter-spacing:-.5px;
+    }
+    .sub{
+      margin:0 auto 18px;
+      max-width: 56ch;
+      font-size: 16px;
+      opacity:.9;
+    }
+
+    .heartRow{
+      margin: 12px 0 8px;
+      font-size: 34px;
+      display:inline-flex;
+      gap:10px;
+      align-items:center;
+      justify-content:center;
+      animation: beat 1.15s ease-in-out infinite;
+      transform-origin:center;
+    }
+    @keyframes beat{
+      0%,100%{ transform: scale(1) }
+      50%{ transform: scale(1.08) }
+    }
+
+    /* Buttons */
+    .arena{
+      margin-top: 18px;
+      display:flex;
+      justify-content:center;
+      gap:14px;
+      position:relative;
+      height: 70px;
+      z-index:1;
+    }
+    button{
+      border: 0;
+      border-radius: 16px;
+      padding: 14px 22px;
+      font-size: 18px;
+      font-weight: 700;
+      cursor:pointer;
+      transition: transform .12s ease, filter .12s ease;
+      user-select:none;
+      box-shadow: 0 14px 28px rgba(17, 2, 10, .16);
+    }
+    button:active{ transform: scale(.98) }
+
+    #yes{
+      background: linear-gradient(135deg, #ff4f93, #ff8fc6, #ffd37d);
+      color: #3a0a22;
+      border: 1px solid rgba(255,255,255,.55);
+      text-shadow: 0 1px 0 rgba(255,255,255,.5);
+    }
+    #yes:hover{ filter: brightness(1.02) }
+
+    #no{
+      position:absolute;
+      left: 56%;
+      top: 0;
+      background: linear-gradient(135deg, #111827, #2a0b1f);
+      color: rgba(255,255,255,.92);
+      border: 1px solid rgba(255,255,255,.14);
+    }
+
+    /* Cute footer line */
+    .footer{
+      margin-top: 18px;
+      text-align:center;
+      font-size: 13px;
+      opacity:.75;
+      z-index:1;
+      position:relative;
+    }
+    .footer span{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:999px;
+      background: rgba(255,255,255,.42);
+      border: 1px solid rgba(255,255,255,.45);
+    }
+
+    /* Modal */
+    .modalBack{
+      position: fixed;
+      inset:0;
+      background: rgba(15, 2, 10, .55);
+      display:none;
+      place-items:center;
+      padding:18px;
+      z-index: 50;
+    }
+    .modal{
+      width:min(740px, 96vw);
+      border-radius: 30px;
+      padding: 26px 20px;
+      background:
+        radial-gradient(800px 280px at 15% 10%, rgba(255,255,255,.75), transparent 60%),
+        radial-gradient(520px 320px at 90% 0%, rgba(255,211,125,.32), transparent 65%),
+        linear-gradient(135deg, rgba(255,255,255,.92), rgba(255,255,255,.76));
+      box-shadow: 0 28px 90px rgba(0,0,0,.35);
+      border: 1px solid rgba(255,255,255,.45);
+      text-align:center;
+      position:relative;
+      overflow:hidden;
+    }
+    .modal h2{
+      margin: 2px 0 10px;
+      font-size: clamp(24px, 3.2vw, 34px);
+      color: var(--wine);
+      letter-spacing:-.3px;
+    }
+    .modal p{
+      margin:0 auto;
+      max-width: 70ch;
+      line-height:1.6;
+      font-size: 16.5px;
+      color: rgba(42,11,31,.92);
+    }
+    .modal .sig{
+      margin-top: 14px;
+      font-weight: 800;
+      color: rgba(107,16,54,.9);
+    }
+    .close{
+      margin-top: 18px;
+      background: linear-gradient(135deg, #111827, #2a0b1f);
+      color: white;
+      border: 1px solid rgba(255,255,255,.12);
+      padding: 12px 18px;
+    }
+
+    /* Sparkles */
+    .sparkles{
+      position: fixed;
+      inset: 0;
+      pointer-events:none;
+      overflow:hidden;
+      display:none;
+      z-index: 60;
+    }
+    .spark{
+      position:absolute;
+      font-size: 22px;
+      animation: float 2.4s ease-out forwards;
+      filter: drop-shadow(0 10px 14px rgba(0,0,0,.15));
+    }
+    @keyframes float{
+      from { transform: translateY(0) scale(1); opacity: 1; }
+      to   { transform: translateY(-210px) scale(1.55); opacity: 0; }
+    }
+
+    /* Small devices: keep arena clickable */
+    @media (max-width: 420px){
+      button{ font-size: 17px; padding: 13px 18px; }
+      .arena{ height: 76px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="bokeh" aria-hidden="true">
+    <div class="orb"></div><div class="orb"></div><div class="orb"></div><div class="orb"></div>
+  </div>
+
+  <main class="wrap">
+    <section class="card" role="region" aria-label="Valentine Card">
+      <div class="top">
+        <div class="kicker"><span class="dot"></span>For Mahek • Baby • Love • Pumpkin • Monkey</div>
+        <div class="heartRow">💖 ✨ 💘</div>
+        <h1>Will you be my Valentine?</h1>
+        <p class="sub">
+          One question, one answer… and one very determined boyfriend. 😌
+        </p>
+
+        <div class="arena" id="arena">
+          <button id="yes" type="button">Yes</button>
+          <button id="no" type="button" aria-label="No (good luck clicking)">No</button>
+        </div>
+
+        <div class="footer">
+          <span>Tip: “No” is shy 🙈</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div class="sparkles" id="sparkles" aria-hidden="true"></div>
+
+  <div class="modalBack" id="modalBack" role="dialog" aria-modal="true" aria-label="Love message">
+    <div class="modal">
+      <h2>YES!! 💘</h2>
+      <p>
+        Mahek… baby, I love you so much.<br><br>
+        You’re my favourite person, my peace, and my happiest place.
+        I feel insanely lucky that I get to call you mine, Love —
+        and I’m genuinely happier because you exist in my life.<br><br>
+
+        Also… congrats, <b>Pumpkin</b> & <b>Monkey</b> 😌🍫🍕<br>
+        Because the “you’ll always force me to eat chocolate and pizza and make me fat” plan?
+        Not only is it real… it’s a lifetime subscription.
+        Forever. No refunds. 😂💖<br><br>
+
+        And yes — one day we’re going back to Melbourne and I’m taking you to
+        <b>Mietta by Rosemary</b> again… because anything you love, I love too. 🌹
+      </p>
+      <div class="sig">— Always yours 🤍</div>
+      <button class="close" id="closeBtn" type="button">Come here ❤️</button>
+    </div>
+  </div>
+
+  <script>
+    const noBtn = document.getElementById('no');
+    const yesBtn = document.getElementById('yes');
+    const arena = document.getElementById('arena');
+    const modalBack = document.getElementById('modalBack');
+    const closeBtn = document.getElementById('closeBtn');
+    const sparkles = document.getElementById('sparkles');
+
+    function clamp(n, min, max){ return Math.max(min, Math.min(max, n)); }
+
+    function moveNo(){
+      const a = arena.getBoundingClientRect();
+      const b = noBtn.getBoundingClientRect();
+
+      const maxX = a.width - b.width;
+      const maxY = a.height - b.height;
+
+      // Keep within the arena, but bias it away from the YES button so it doesn't overlap
+      let x = Math.random() * maxX;
+      let y = Math.random() * maxY;
+
+      // Gentle nudge to avoid center area
+      if (x < a.width * 0.55) x = a.width * 0.62 + Math.random() * (a.width * 0.35);
+
+      noBtn.style.left = `${clamp(x, 0, maxX)}px`;
+      noBtn.style.top  = `${clamp(y, 0, maxY)}px`;
+    }
+
+    // Make it *very* hard to click on desktop + mobile
+    noBtn.addEventListener('mouseenter', moveNo);
+    noBtn.addEventListener('mousemove', moveNo);
+    noBtn.addEventListener('pointerenter', moveNo);
+    noBtn.addEventListener('pointermove', moveNo);
+    noBtn.addEventListener('touchstart', (e) => { e.preventDefault(); moveNo(); }, { passive:false });
+
+    function popSparkles(){
+      sparkles.style.display = 'block';
+      sparkles.innerHTML = '';
+      const emojis = ['💖','✨','💘','💞','🌹','🥰','🍫','🍕'];
+      for (let i = 0; i < 30; i++){
+        const s = document.createElement('div');
+        s.className = 'spark';
+        s.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+        s.style.left = `${Math.random() * 100}vw`;
+        s.style.top  = `${72 + Math.random() * 22}vh`;
+        s.style.animationDelay = `${Math.random() * 0.35}s`;
+        sparkles.appendChild(s);
+      }
+      setTimeout(() => { sparkles.style.display = 'none'; }, 2600);
+    }
+
+    yesBtn.addEventListener('click', () => {
+      popSparkles();
+      modalBack.style.display = 'grid';
+    });
+
+    closeBtn.addEventListener('click', () => {
+      modalBack.style.display = 'none';
+    });
+
+    // Initial position for "No"
+    moveNo();
+  </script>
+</body>
+</html>
